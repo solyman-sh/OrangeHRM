@@ -1,9 +1,9 @@
-import HomePage from "../Page/Pages/HomePage"
+
 import WebNavbar from "../Page/Navbar/WebNavbar"
 import Password from "../Page/Pages/Password"
 
 
-const homePage = new HomePage()
+
 const webNavbar = new WebNavbar()
 const password = new Password()
 describe('Home Page verificaiton ', () => {
@@ -20,6 +20,7 @@ describe('Home Page verificaiton ', () => {
     it('Verify Support Page  ', () => {
         webNavbar.ViewProfile()
         webNavbar.SupportPage()
+        webNavbar.push(2000)
     });
 
     it('Verify Password Change Page', () => {
@@ -29,12 +30,14 @@ describe('Home Page verificaiton ', () => {
         password.NewPassword()
         password.ReNewPassword()
         password.SubmitButton()
+        webNavbar.push(2000)
 
     });
 
     it('Logout User Option ', () => {
         webNavbar.ViewProfile()
         webNavbar.Logout()
+        webNavbar.push(2000)
     });
 
     
